@@ -1,2 +1,31 @@
-<h1>{{burger}}</h1>
-<p>  <input type="submit" value="Submit"></p>
+<h1>Eat-Da-Burger!</h1>
+<img src="public\assests\img\burger-clipart-easy-3.jpg" alt="burger photo">
+
+
+<ul>
+  {{#each burger}}
+    {{#unless }}
+      {{> }}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Devoured</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if }}
+      {{> }}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<form class="create-form">
+<div>
+  <label for="burgerName">Burger Name</label><br>
+  <input type="text" id="burgerName" name="name" value="">
+</div>
+  <button type="submit">Enter Burger</button>
+</form>
+<div> Enter buger name and click the button</div>

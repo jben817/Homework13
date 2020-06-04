@@ -4,7 +4,6 @@ var burger = require("../models/burger");
 var express = require("express");
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
 var burger = require("../models/burger");
 
 router.get("/", function (req, res) {
@@ -18,9 +17,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
-  var userBurgerInfo = req.body;
-
-  burger.insertOne(req.body, function (result) {
+    burger.insertOne(req.body, function (result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
